@@ -29,7 +29,7 @@ private:
 	int mId;
 	SpreadsheetCell** mCells;
 	//mCells = new SpreadsheetCell*[mWidth];
-	//for(auto i:mHeight)
+	//for(auto i:mWidth)
 	//    mCells[i] = new SpreadsheetCell[mHeight];
 
 	const SpreadsheetApplication& mTheApp;
