@@ -53,6 +53,8 @@ void Spreadsheet::copyFrom(const Spreadsheet& src)
 	for (int i = 0; i < mWidth; i++) {
 		mCells[i] = new SpreadsheetCell[mHeight];
 	}
+	//copy constructor 里记得要(new memory) if there is (new memory) in source object
+	//然后再复制
 
 	for (int i = 0; i < mWidth; i++) {
 		for (int j = 0; j < mHeight; j++) {
