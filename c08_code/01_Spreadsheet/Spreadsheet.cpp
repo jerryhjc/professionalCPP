@@ -10,7 +10,9 @@ Spreadsheet::Spreadsheet(int inWidth, int inHeight)
 : mWidth(inWidth)
 , mHeight(inHeight)
 {
-	mCells = new SpreadsheetCell*[mWidth];
+	mCells = new SpreadsheetCell*[mWidth];  // SpreadsheetCell*[mwidth] 实际是二维数组；
+	//可以把指针看成数组， SpreadsheetCell* 表示指向数组首元素的指针，所以SpreadsheetCell*表示的就是数组
+	//SpreadsheetCell*[mwidth] 表示一个数组，他每个元素是指向数组首元素的指针
 	for (int i = 0; i < mWidth; i++) {
 		mCells[i] = new SpreadsheetCell[mHeight];
 	}
