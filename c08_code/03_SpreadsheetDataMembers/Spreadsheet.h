@@ -28,6 +28,9 @@ private:
 	int mWidth, mHeight;
 	int mId;
 	SpreadsheetCell** mCells;
+	//mCells = new SpreadsheetCell*[mWidth];
+	//for(auto i:mHeight)
+	//    mCells[i] = new SpreadsheetCell[mHeight];
 
 	const SpreadsheetApplication& mTheApp;
 
