@@ -32,6 +32,7 @@ public:
 		std::string mString;
 
 		mutable int mNumAccesses = 0;
+		//why mutable here inside private?
 	};
 
 	Spreadsheet(const SpreadsheetApplication& theApp,
