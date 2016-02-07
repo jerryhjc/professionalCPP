@@ -85,9 +85,8 @@ for(map<char, int>::iterator it = mp.begin(); it != mp.end(); it++)
 }
 
 
-
+//test function 
 int main() {
-	// your code goes here
-	function(); 
+	foundPalindrome(); 
 	return 0;
 }
