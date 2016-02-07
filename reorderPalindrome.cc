@@ -21,6 +21,13 @@ int j = str.size() - 1;
 int mid = str.size() / 2; 
 int k = 1;
 
+if(str.size() == 0)
+{
+        cout << "no found palindrome string" << endl;
+        return;
+}  
+
+// check corner case string with all single char "abcd"
 for(map<char, int>::iterator it = mp.begin(); it != mp.end(); it++)
 {   
     static int count; 
@@ -36,6 +43,7 @@ for(map<char, int>::iterator it = mp.begin(); it != mp.end(); it++)
 
 for(map<char, int>::iterator it = mp.begin(); it != mp.end(); it++)
 {
+    //if count number is even, 
     while(it->second % 2 == 0 && it->second != 0)
     {  
         str[i] = it->first;
@@ -43,19 +51,24 @@ for(map<char, int>::iterator it = mp.begin(); it != mp.end(); it++)
         it->second -= 2;
         i++, j--; 
     }
+    
+    // if count number is odd, 
     while(it->second % 2 != 0 && it->second != 0)
     {
+    	// if string size is even
         if(str.size() % 2 == 0)
         {
-     		str = "";
+     	    str = "";
             return;
         }
+        
+        // if count number is 1
         if(it->second == 1)
         {
             str[mid] = it->first;
             it->second -= 1;
         }
-        else 
+        else  // if count number odd number other than 1
         {
             
             str[mid - k] = it->first;
